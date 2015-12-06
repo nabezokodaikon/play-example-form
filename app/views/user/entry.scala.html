@@ -1,0 +1,9 @@
+@(userForm: Form[User])(implicit messages: Messages)
+@import helper._
+@import models._
+
+@helper.form(action = routes.Application.entrySubmit) {
+    @helper.inputText(userForm("name"))
+    @helper.inputText(userForm("age"))
+    <input type="submit" value="entry">
+}
